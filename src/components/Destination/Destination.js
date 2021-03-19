@@ -10,6 +10,7 @@ import { useState } from 'react';
 import MapOpen from './Map/MapOpen';
 const Destination = () => {
     const [destination, setDestination] = useState({});
+    const [showData, setShowData] = useState(false);
     const {name} = useParams();
     const vehicleData = fakeData.find(vehicle => vehicle.name === name);
     // console.log(vehicleData);
@@ -21,6 +22,7 @@ const Destination = () => {
         const {FROM, TO} = data;
         console.log(FROM, TO);
         setDestination({from: FROM, to: TO});
+        setShowData(true);
     };
 
     return (
@@ -45,15 +47,17 @@ const Destination = () => {
                 </form>
                 <p>Pick from : {destination.from}</p>
                 <p>Pick To : {destination.to}</p>
-                <div className="vehicle-data">
-                    <div>
-                        <img src={vehicleData.img} alt=""/>
-                    </div>
-                    <div className="data-description">
-                        <h6>Persion : {vehicleData.sit}</h6>
-                        <h6>Cost Per/Hour: $59</h6>
-                    </div>
-                </div>
+                {showData && 
+                     <div className="vehicle-data">
+                        <div>
+                            <img src={vehicleData.img} alt=""/>
+                        </div>
+                        <div className="data-description">
+                            <h6>Persion : {vehicleData.sit}</h6>
+                            <h6>Cost Per/Hour: $59</h6>
+                        </div>
+                      </div>
+                }
             </div>
             <div className="map-container">
                 {/* <MapOpen></MapOpen> */}

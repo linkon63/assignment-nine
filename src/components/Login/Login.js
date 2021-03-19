@@ -118,9 +118,9 @@ const Login = () => {
     console.log('error', error);
     return (
         <div>
-            <p>This is login page</p>
+            {/* <p>This is login page</p>
             <p>User Context : {loggedInUser.email}</p>
-            <h5>signnedIn : {loggedInUser.signnedIn ? 'Logged In' : 'Sign in'}</h5>
+            <h5>signnedIn : {loggedInUser.signnedIn ? 'Logged In' : 'Sign in'}</h5> */}
 
             {/* From Started React Form */}
             {
