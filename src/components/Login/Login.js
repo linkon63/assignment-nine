@@ -8,9 +8,6 @@ import { useContext } from 'react';
 import { UserContext } from '../../App';
 import { useForm } from 'react-hook-form';
 import './Login.css';
-import ReactDOM from 'react-dom';
-import Button from '@material-ui/core/Button';
-import { AccessAlarm, Face, ThreeDRotation } from '@material-ui/icons';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import GTranslateIcon from '@material-ui/icons/GTranslate';
 if(firebase.apps.length === 0 ){
@@ -118,11 +115,6 @@ const Login = () => {
     console.log('error', error);
     return (
         <div>
-            {/* <p>This is login page</p>
-            <p>User Context : {loggedInUser.email}</p>
-            <h5>signnedIn : {loggedInUser.signnedIn ? 'Logged In' : 'Sign in'}</h5> */}
-
-            {/* From Started React Form */}
             {
                 newUser.createAccount && 
                 <div className="create-account-form">
@@ -154,9 +146,8 @@ const Login = () => {
             <div className="signin-form">   
                 <p style={{color : 'red'}}>{error.message}</p>
                 <p>Already have a account <button className="account-login" onClick={handleUser}>Login</button></p>
-
                 <button className="account-login-btn" onClick={handleGoogleSignIn}><GTranslateIcon></GTranslateIcon> Google</button> <br/>
-                <button className="account-login-btn" onClick={handleFacebookSignIn}><FacebookIcon></FacebookIcon> Faceebook</button>
+                <button className="account-login-btn" onClick={handleFacebookSignIn}><FacebookIcon></FacebookIcon> Facebook </button>
             </div>
         </div>
     );

@@ -9,6 +9,8 @@
 @media (max-width: 680px) {
     .vehicle-card-container{
         grid-template-columns: repeat(1,1fr);
-        
+        align-content: center;
+        margin: 50px auto;
+        width: 60%;
     }
 }

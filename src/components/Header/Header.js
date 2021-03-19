@@ -20,9 +20,11 @@ const Header = () => {
                     <Link to="/destination/"> Destination </Link>
                     <Link to="/blog"> Blog </Link>
                     <Link to="/contact"> Contact </Link>
-                    {
-                    loggedInUser.email && (`${loggedInUser.name || 'Unknown User'}`)
-                    }
+                        <span className="user-name">
+                        {
+                        loggedInUser.email && (`${loggedInUser.name || 'Unknown User'}`)
+                        }
+                        </span>
                     {loggedInUser.email ? <button className="login-btn" onClick={signOut}>Sign Out</button> :
                         <Link to="/login"><button className="login-btn">Login</button></Link>
                     }

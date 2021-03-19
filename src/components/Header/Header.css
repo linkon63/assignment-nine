@@ -28,3 +28,9 @@
     border: none;
     line-height: 40px;
     font-size: 20px;}
+.user-name{
+  font-size: 14px;
+  font-style: italic;
+  font-weight: bold;
+  padding: 5px;
+}    

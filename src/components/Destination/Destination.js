@@ -2,20 +2,16 @@ import React from 'react';
 import { useHistory, useParams } from 'react-router';
 import fakeData from '../../fakeData/fakeData.json'
 import MapImg from '../../images/Map.png';
-import Contact from '../Contact/Contact';
 import './Destination.css';
-import Sideber from './Sideber/Sideber';
 import { useForm } from "react-hook-form";
 import { useState } from 'react';
-import MapOpen from './Map/MapOpen';
+import MapBody from './Map/MapBody';
 const Destination = () => {
     const [destination, setDestination] = useState({});
     const [showData, setShowData] = useState(false);
     const {name} = useParams();
     const vehicleData = fakeData.find(vehicle => vehicle.name === name);
-    // console.log(vehicleData);
-    // console.log(name);
-    
+    // console.log(vehicleData);    
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
         console.log(data)
@@ -29,7 +25,6 @@ const Destination = () => {
         <div className="destination-container">
             <div className="sidebar">
                 <h5>Your Selected Vehicle : {vehicleData.name}</h5>
-
                 <form onSubmit={handleSubmit(onSubmit)}>   
                     <select name="FROM" ref={register}>
                         <option value="mirpur">Mirpur</option>
@@ -60,7 +55,7 @@ const Destination = () => {
                 }
             </div>
             <div className="map-container">
-                {/* <MapOpen></MapOpen> */}
+                {/* <MapBody></MapBody> */}
                 <img src={MapImg} alt=""/>
             </div>
         </div>
