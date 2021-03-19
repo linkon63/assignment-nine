@@ -1,0 +1,25 @@
+.destination-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin-top: 23px;
+}
+.sidebar{
+    margin-right: 40px;
+    margin-left: 15px;
+    background-color: #f1ede7;
+    padding: 20px 20px;
+    width: 330px;
+    border-radius: 15px;
+    height: 400px;
+}
+map-container img {
+    width: 300px;
+}
+.vehicle-data{
+    display: flex;
+}
+.vehicle-data img{
+    width: 40px;
+    height: 40px;
+    margin-right: 30px;
+}

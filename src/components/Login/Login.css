@@ -1,0 +1,36 @@
+.create-account-form{
+    border: 1px solid red;
+    text-align: center;
+    width: 30%;
+    margin-left: 450px;
+}
+.signin-form{
+    text-align: center;
+    width: 30%;
+    margin-left: 450px;
+}
+.account-login{
+    border: none;
+    background: none;
+    text-decoration: underline;
+    color: tomato;
+}
+
+.account-login-btn{
+    border: none;
+    background-color:whitesmoke;
+    font-size: 18px;
+    color: black;
+    padding: 14px 40px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    width: 70%;
+}
+.submit-btn{
+    background: bisque;
+    border: none;
+    margin: 10px 0;
+    padding: 5px 20px;
+    font-size: 15px;
+    width: 45%;
+}

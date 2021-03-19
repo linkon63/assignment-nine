@@ -1,0 +1,30 @@
+.header-navbar{
+    line-height: 40px;
+    font-size: 22px;
+    overflow: auto;
+    text-align: initial;
+    margin-top: 15px;
+}
+.header-navbar a{
+    text-decoration: none;
+    color: #000;
+    margin-left: 80px;
+    padding: 5px;
+
+}
+.header-navbar a:hover{
+    color: gray;
+}
+@media screen and (max-width: 500px) {
+    .header-navbar Link{
+      float: none;
+      display: block;
+    }
+  }
+.login-btn{
+    padding: 0px 35px;
+    color:whitesmoke;
+    background-color: tomato;
+    border: none;
+    line-height: 40px;
+    font-size: 20px;}
